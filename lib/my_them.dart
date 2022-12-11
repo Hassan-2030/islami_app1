@@ -13,7 +13,11 @@ class My_ThemData {
           headline1: TextStyle(
               fontSize: 30, fontWeight: FontWeight.bold, color: colorblack),
           subtitle1: TextStyle(
-              fontSize: 25, fontWeight: FontWeight.bold, color: colorgold)));
+              fontSize: 25, fontWeight: FontWeight.bold, color: colorgold)),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: colorgold,
+          selectedItemColor: colorblack,
+          unselectedItemColor: Colors.white));
 
   static ThemeData darkThem = ThemeData(
       scaffoldBackgroundColor: Colors.transparent,
