@@ -5,13 +5,22 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'home',
-          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+    return Stack(
+      children: [
+        Image.asset(
+          'assets/images/bg.png',
+          width: double.infinity,
+          fit: BoxFit.fitWidth,
         ),
-      ),
+        Scaffold(
+          appBar: AppBar(
+            title: Text(
+              'home',
+              style: Theme.of(context).textTheme.headline1,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
