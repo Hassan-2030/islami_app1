@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app0/home_screen/hadethTap.dart';
-import 'package:islami_app0/home_screen/quranTap.dart';
-import 'package:islami_app0/home_screen/radioTap.dart';
-import 'package:islami_app0/home_screen/sebhaTap.dart';
+import 'package:islami_app0/home_screen/hadeth.dart';
+import 'package:islami_app0/home_screen/quranTap/quran.dart';
+import 'package:islami_app0/home_screen/radio.dart';
+import 'package:islami_app0/home_screen/sebha.dart';
 import 'package:islami_app0/my_them.dart';
 
 class HomeScreen extends StatefulWidget {
-  static const String routNmae = 'Home';
+  static const String routName = 'Home';
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
