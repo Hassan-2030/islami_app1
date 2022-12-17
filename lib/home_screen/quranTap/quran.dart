@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app0/my_them.dart';
 
 import 'sura_name_item.dart';
@@ -129,7 +130,7 @@ class QuranTap extends StatelessWidget {
         children: [
           Image.asset('assets/images/quran_screen_logo.png'),
           Divider(color: My_ThemData.colorgold, thickness: 3),
-          Text('اسم السورة',
+          Text(AppLocalizations.of(context)!.sura_name,
               style: Theme.of(context)
                   .textTheme
                   .headline1
