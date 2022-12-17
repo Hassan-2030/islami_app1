@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app0/home_screen/hadeth.dart';
 import 'package:islami_app0/home_screen/quranTap/quran.dart';
 import 'package:islami_app0/home_screen/radio.dart';
 import 'package:islami_app0/home_screen/sebha.dart';
 import 'package:islami_app0/my_them.dart';
+import 'package:islami_app0/provider/my_provider.dart';
+import 'package:provider/provider.dart';
+
+import '../settings/settings.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routName = 'Home';
@@ -17,17 +22,18 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var pro = Provider.of<MyProvider>(context);
     return Stack(
       children: [
         Image.asset(
-          'assets/images/bg.png',
+          pro.getBackeGroundImage(),
           width: double.infinity,
           fit: BoxFit.fitWidth,
         ),
         Scaffold(
           appBar: AppBar(
             title: Text(
-              'home',
+              AppLocalizations.of(context)!.appTitle,
               style: Theme.of(context).textTheme.headline1,
             ),
           ),
@@ -62,6 +68,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     AssetImage('assets/images/icon_hadeh'),
                   ),
                   label: 'hadeth',
+                  backgroundColor: My_ThemData.colorgold),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.settings,
+                    size: 30,
+                  ),
+                  label: 'settings',
                   backgroundColor: My_ThemData.colorgold)
             ],
           ),
@@ -71,5 +84,11 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  List<Widget> taps = [QuranTap(), SebhaTap(), RadioTap(), HadethTap()];
+  List<Widget> taps = [
+    QuranTap(),
+    SebhaTap(),
+    RadioTap(),
+    HadethTap(),
+    SettingsTap()
+  ];
 }

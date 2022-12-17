@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app0/my_them.dart';
 
 import '../hadeth_details/hadedth_details.dart';
@@ -21,7 +22,7 @@ class HadethTap extends StatelessWidget {
           thickness: 3,
         ),
         Text(
-          'ahadeth',
+          AppLocalizations.of(context)!.ahadeth,
           style: Theme.of(context).textTheme.subtitle1,
           textAlign: TextAlign.center,
         ),
